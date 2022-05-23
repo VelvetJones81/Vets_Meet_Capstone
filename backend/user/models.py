@@ -10,6 +10,7 @@ class VeteranUser(models.Model):
     address = models.CharField(max_length=125)
     city = models.CharField(max_length=25)
     state = models.CharField(max_length=20)
+    zip_code = models.CharField('Zip Code', max_length=10, null=True)
     branch =  models.ForeignKey(Branch, max_length=20, on_delete= models.CASCADE)
     rank = models.ForeignKey(Rank, max_length=20, on_delete= models.CASCADE)
     time_served = models.CharField(max_length=30)
