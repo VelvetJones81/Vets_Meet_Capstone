@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
+    'branch',
+    'event',
+    'rank',
+    'user',
+    'venue',
     'cars.apps.CarsConfig'  # This app is for example use only
 ]
 
