@@ -1,9 +1,11 @@
 from django.db import models
+from authentication.views import User
 from branch.models import Branch
 from rank.models import Rank
 
 # Create your models here.
 class VeteranUser(models.Model):
+    username = models.ForeignKey(User, max_length=150, on_delete=models.CASCADE, null=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email_address =models.EmailField('User Email')
